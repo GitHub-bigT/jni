@@ -12,7 +12,7 @@ import android.widget.TextView;
 public class HelloWorldActivity extends Activity {
     private TextView mTextView;
     static {
-        System.loadLibrary("practice");
+        System.loadLibrary("helloworld");
     }
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -23,8 +23,8 @@ public class HelloWorldActivity extends Activity {
 
     private void initViews() {
         mTextView = (TextView) findViewById(R.id.tv_helloworld);
+        mTextView.setText(stringFromJNI());
     }
 
     private native String stringFromJNI();
-
 }
