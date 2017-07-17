@@ -1,4 +1,4 @@
-package ricoh.jnipractice;
+package ricoh.jnipractice.activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -13,6 +13,10 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import ricoh.jnipractice.constants.Constants;
+import ricoh.jnipractice.other.DividerItemDecoration;
+import ricoh.jnipractice.R;
 
 public class MainActivity extends Activity {
     private RecyclerView mRecycleView;
@@ -29,6 +33,11 @@ public class MainActivity extends Activity {
     private void initList() {
         Log.i(Constants.TAG,"activity: init list");
         mList.add("hello world");
+        mList.add("public native");
+        mList.add("public native111");
+        mList.add("public native222");
+        mList.add("public native333");
+        mList.add("public native444");
     }
 
     private void initViews() {
@@ -49,6 +58,11 @@ public class MainActivity extends Activity {
                     case 0:
                         Intent intent1 = new Intent(MainActivity.this,HelloWorldActivity.class);
                         startActivity(intent1);
+                        break;
+                    //public native
+                    case 1:
+                        Intent intent2 = new Intent(MainActivity.this,PublicNativeActivity.class);
+                        startActivity(intent2);
                         break;
                 }
             }
@@ -82,6 +96,7 @@ public class MainActivity extends Activity {
             Log.i(Constants.TAG,"adapter: onBindViewHolder");
             holder.rv_item_tv.setText(mList.get(position));
             Log.i(Constants.TAG,"adapter: set text");
+            Log.i(Constants.TAG,"mmm"+mList.get(position));
             if (onItemClickListener != null) {
                 holder.rv_item_tv.setOnClickListener(new View.OnClickListener() {
                     @Override

@@ -1,4 +1,4 @@
-package ricoh.jnipractice;
+package ricoh.jnipractice.constants;
 
 /**
  * Created by bigT on 2017/7/14.

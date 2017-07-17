@@ -1,9 +1,11 @@
-package ricoh.jnipractice;
+package ricoh.jnipractice.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.widget.TextView;
+
+import ricoh.jnipractice.R;
 
 /**
  * Created by bigT on 2017/7/14.
